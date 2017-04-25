@@ -103,6 +103,7 @@ exports.devServer = ({ host, port } = {}) => ({
 ```javascript
 const merge = require('webpack-merge');
 const parts = require('./webpack.parts');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = merge([
@@ -120,6 +121,8 @@ module.exports = merge([
     },
     // Use plugins to add functionality typically related to bundles in webpack.
     plugins: [
+      // Webpack generate all your favicons and icons for you
+      new FaviconsWebpackPlugin('./src/assets/images/logo.ico'),
       // Simplifies creation of HTML files to serve your webpack bundles.
       // Useful for webpack bundles that include a hash in the filename which changes every compilation.
       new HtmlWebpackPlugin({
@@ -171,6 +174,7 @@ We will set `nodemon` to watch for changes in webpack files to restart the devel
 
 ```json
 "scripts": {
+  "prestart": "nsp check",
   "start": "nodemon --watch webpack.*.js --exec \"webpack-dev-server --config webpack.dev.js --progress --color\"",
   "build": "webpack --config webpack.prod.js",
   "test": "echo \"Error: no test specified\" && exit 1"

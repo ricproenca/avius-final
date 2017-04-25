@@ -7,7 +7,9 @@
     "test": "tests"
   },
   "scripts": {
+    "prestart": "nsp check",
     "start": "nodemon --watch webpack.*.js --exec \"webpack-dev-server --config webpack.dev.js --progress --color\"",
+    "prebuild": "npm run test",
     "build": "webpack --config webpack.prod.js",
     "lint:js": "eslint src/ webpack.*.js --cache",
     "lint:style": "stylelint src/assets/css/*.css",
@@ -15,7 +17,7 @@
     "share:localtunnel": "npm-run-all --parallel start localtunnel",
     "ngrok": "ngrok http -host-header=localhost 8080",
     "share:ngrok": "npm-run-all --parallel start ngrok",
-    "test": "mocha --reporter progress tests/setup.js \"tests/**/*.test.js\"",
+    "test": "mocha --reporter spec tests/setup.js \"tests/**/*.test.js\"",
     "test:watch": "npm run test -- --watch",
     "deploy": "surge ./build"
   },
@@ -47,6 +49,7 @@
     "eslint": "^3.19.0",
     "eslint-loader": "^1.7.1",
     "extract-text-webpack-plugin": "^2.1.0",
+    "favicons-webpack-plugin": "0.0.7",
     "file-loader": "^0.11.1",
     "git-revision-webpack-plugin": "^2.4.1",
     "glob": "^7.1.1",

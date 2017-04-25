@@ -37,14 +37,6 @@ import jsdom from 'jsdom';
 
 const { JSDOM } = jsdom;
 
-describe('Our exemple test', () => {
-
-  it('should pass', () => {
-    expect(true).to.equal(true);
-  });
-
-});
-
 describe('index.html', () => {
 
   const options = {};
@@ -73,6 +65,8 @@ If you forget to end your test with .then(done,done), mocha warns you about a mi
 Add test scripts to `package.json`
 ```json
 scripts: {
+  ...
+  "prebuild": "npm run test",
   ...
   "test": "mocha --reporter progress tests/setup.js \"tests/**/*.test.js\"",
   "test:watch": "npm run test -- --watch"

@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const parts = require('./webpack.parts');
 const bootstrapEntryPoints = require('./webpack.bootstrap');
 
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = merge([
@@ -21,6 +22,8 @@ module.exports = merge([
     },
     // Use plugins to add functionality typically related to bundles in webpack.
     plugins: [
+       // Webpack generate all your favicons and icons for you
+      new FaviconsWebpackPlugin('./src/assets/images/logo-avius.png'),
       // Simplifies creation of HTML files to serve your webpack bundles.
       // Useful for webpack bundles that include a hash in the filename which changes every compilation.
       new HtmlWebpackPlugin({

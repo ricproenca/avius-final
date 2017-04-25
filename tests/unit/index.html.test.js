@@ -3,14 +3,6 @@ import jsdom from 'jsdom';
 
 const { JSDOM } = jsdom;
 
-describe('Our exemple test', () => {
-
-  it('should pass', () => {
-    expect(true).to.equal(true);
-  });
-
-});
-
 describe('index.html', () => {
 
   const options = {};
