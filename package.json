@@ -16,7 +16,8 @@
     "ngrok": "ngrok http -host-header=localhost 8080",
     "share:ngrok": "npm-run-all --parallel start ngrok",
     "test": "mocha --reporter progress tests/setup.js \"tests/**/*.test.js\"",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "deploy": "surge ./build"
   },
   "repository": {
     "type": "git",
@@ -63,6 +64,7 @@
     "style-loader": "^0.16.1",
     "stylelint": "^7.10.1",
     "stylelint-config-standard": "^16.0.0",
+    "surge": "^0.19.0",
     "url-loader": "^0.5.8",
     "watch-ignore-webpack-plugin": "^1.0.0",
     "webpack": "^2.4.1",

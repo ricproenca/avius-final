@@ -226,7 +226,7 @@ exports.loadImages = ({ include, exclude, options } = {}) => ({
   module: {
     rules: [
       {
-        test: /\.(png|jpg|svg)$/,
+        test: /\.(png|jpg|svg|gif)$/,
         include,
         exclude,
         use: {
@@ -244,7 +244,7 @@ exports.extractImages = ({ include, exclude, options } = {}) => ({
   module: {
     rules: [
       {
-        test: /\.(png|jpg|svg)$/,
+        test: /\.(png|jpg|svg|gif)$/,
         include,
         exclude,
         use: {

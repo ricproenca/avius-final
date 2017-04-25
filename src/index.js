@@ -10,8 +10,8 @@ import loginComponent from './js/loginComponent';
 const clockElement = clockComponent();
 const loginElement = loginComponent();
 
-$('body').append(clockElement);
 $('body').append(loginElement);
+$('body').append(clockElement);
 
 function update(el) {
   el.html(moment().format('D. MMMM YYYY H:mm:ss'));
