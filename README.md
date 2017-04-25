@@ -54,3 +54,11 @@ You can find out the next guides at `guides` folder
 3. Minifying CSS
 4. Minifying HTML
 5. Attaching a Revision to the Build
+
+## Testing
+1. Unit Tests
+2. Integration Tests
+
+## Continuous Integration
+1. Travis CI [Linux]
+2. Appveyor [Windows]

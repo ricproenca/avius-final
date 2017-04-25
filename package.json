@@ -15,7 +15,8 @@
     "share:localtunnel": "npm-run-all --parallel start localtunnel",
     "ngrok": "ngrok http -host-header=localhost 8080",
     "share:ngrok": "npm-run-all --parallel start ngrok",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter progress tests/setup.js \"tests/**/*.test.js\"",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,7 @@
     "babili-webpack-plugin": "0.0.11",
     "bootstrap-loader": "^2.0.0",
     "bootstrap-sass": "^3.3.7",
+    "chai": "^3.5.0",
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.0",
     "cssnano": "^3.10.0",
@@ -48,6 +50,8 @@
     "git-revision-webpack-plugin": "^2.4.1",
     "glob": "^7.1.1",
     "html-webpack-plugin": "^2.28.0",
+    "jsdom": "^10.0.0",
+    "mocha": "^3.3.0",
     "node-sass": "^4.5.2",
     "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.2",
