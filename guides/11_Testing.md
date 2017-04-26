@@ -1,4 +1,6 @@
 # Testing
+To run tests, Webpack needs to create a bundle before the tests can run, also have to generate sourcemaps to know where your code is failing and to generate code coverage for the original source files.<br>
+Leaving webapck will bring a boost in performance.
 
 ## Unit Tests
 Install:
