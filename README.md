@@ -1,7 +1,6 @@
 # avius - my javascript environment development starter kit<br>
-
-![travis build](https://img.shields.io/travis/ricproenca/avius-final.svg)
-![appveyor build](https://img.shields.io/appveyor/ci/ricproenca/avius-final.svg)
+travis ![travis](https://img.shields.io/travis/ricproenca/avius-final.svg)<br>
+appveyor ![appveyor](https://img.shields.io/appveyor/ci/ricproenca/avius-final.svg)
 
 _**We’ve entered the era of JavaScript decision fatigue.**_<br><br>
 Every time we start a new project, we’re overwhelmed at the selection of build tools, testing frameworks, component libraries and more.<br>
