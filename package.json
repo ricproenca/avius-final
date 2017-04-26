@@ -17,7 +17,7 @@
     "share:localtunnel": "npm-run-all --parallel start localtunnel",
     "ngrok": "ngrok http -host-header=localhost 8080",
     "share:ngrok": "npm-run-all --parallel start ngrok",
-    "test:mocha": "mocha --reporter spec tests/setup.js \"tests/**/*.test.js\"",
+    "test:mocha": "mocha --reporter spec tests/setup.js \"tests/unit/*.test.js\"",
     "test:watch": "npm run test -- --watch",
     "test": "nyc npm run test:mocha",
     "deploy": "surge ./build"
