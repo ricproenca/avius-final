@@ -140,7 +140,7 @@ const parts = require('./webpack.parts');
 const commonConfig = require('./webpack.common');
 
 const developmentConfig = merge([
-  parts.setFreeVariable('process.env.NODE_ENV', 'production'),
+  parts.setFreeVariable('process.env.NODE_ENV', 'development'),
   parts.devServer({
     host: process.env.HOST,
     port: process.env.PORT
