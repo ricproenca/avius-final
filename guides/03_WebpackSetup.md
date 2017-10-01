@@ -26,6 +26,7 @@ npm install webpack-merge --save-dev
 npm install webpack-dev-server --save-dev
 npm install html-webpack-plugin --save-dev
 npm install watch-ignore-webpack-plugin --save-dev
+npm install --save-dev favicons-webpack-plugin
 npm install clean-webpack-plugin --save-dev
 ```
 
